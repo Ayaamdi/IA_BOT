@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf5;
+    color: #49382e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    box-shadow: 0 2px 10px #00000010;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e47752;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #49382e;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e47752;
+}
+
+.hero {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background:
+        linear-gradient(90deg, #fff4e8ed, #fff4e899),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1400")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tag {
+    color: #d96d4d;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.main-btn,
+.search-box button,
+.random-btn {
+    display: inline-block;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    background: #e47752;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main-btn:hover,
+.search-box button:hover,
+.random-btn:hover {
+    background: #c95c3b;
+}
+
+.search-section,
+.recipes-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.search-section h2,
+.recipes-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.search-section p {
+    color: #806d62;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #e8d7c9;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #e47752;
+}
+
+.random-btn {
+    margin-top: 20px;
+    background: #8a9b65;
+}
+
+.random-btn:hover {
+    background: #6f8050;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000010;
+    text-align: right;
+    transition: 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.recipe-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #fffaf5;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Téléphone */
+@media (max-width: 600px) {
+    .recipe-card img {
+        height: 230px;
+        object-fit: contain;
+    }
+}
+
+
+.recipe-info {
+    padding: 18px;
+}
+
+.recipe-info h3 {
+    color: #d96d4d;
+    margin-bottom: 10px;
+}
+
+.recipe-info p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.recipe-info button {
+    background: #8a9b65;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.recipe-info button:hover {
+    background: #6f8050;
+}
+
+#message {
+    margin-top: 20px;
+    color: #d96d4d;
+    font-weight: bold;
+}
+
+footer {
+    background: #49382e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 2;
+}
+
+/* Téléphones */
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 330px;
+        padding: 35px 20px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .search-section,
+    .recipes-section {
+        padding: 40px 18px;
+    }
+
+    .search-section h2,
+    .recipes-section h2 {
+        font-size: 22px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+    }
+
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card img {
+        height: 200px;
+    }
+}
